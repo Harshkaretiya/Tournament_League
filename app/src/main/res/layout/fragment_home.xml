@@ -10,11 +10,16 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tool_bar"
+            android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="10dp"
                 >
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
@@ -35,7 +40,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    app:cardCornerRadius="10dp"
+                    app:cardCornerRadius="25dp"
                     app:strokeWidth="0dp"
                     android:backgroundTint="#F0FF91"
 
@@ -54,6 +59,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="100"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
                             android:gravity="center"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="30dp"
@@ -72,5 +79,59 @@
                     android:fontFamily="@font/airbnbcereal_md"
                     />
             </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="30dp"
+                android:outlineSpotShadowColor="@color/white"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@drawable/search1"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="Search"
+                    />
+            </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/round_all"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="10dp"
+                >
+                <com.google.android.material.card.MaterialCardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="match_parent"
+                    app:layout_constraintDimensionRatio="16:7"
+                    android:layout_height="0dp"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:background="#9C9A9A"
+                    tools:ignore="MissingConstraints">
+
+                    <
+                        android:id="@+id/image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderScrollTimeInSec="5"
+                        app:sliderStartAutoCycle="true" />
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 </FrameLayout>
