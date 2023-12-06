@@ -1,8 +1,10 @@
-package com.example.tournamentleague
+package com.example.tournamentleague.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.tournamentleague.Fragment.HomeFragment
+import com.example.tournamentleague.R
 import com.example.tournamentleague.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
