@@ -94,7 +94,6 @@
                     android:layout_height="match_parent"
                     app:iconifiedByDefault="false"
                     app:searchIcon="@drawable/search1"
-
                     app:queryBackground="@android:color/transparent"
                     app:queryHint="Search"
                     />

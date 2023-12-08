@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
+    tools:context=".Activity.TournamentListActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardCornerRadius="10dp"
+            app:strokeWidth="0dp"
+            android:backgroundTint="@color/white"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrowleft"
+                android:layout_margin="10dp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="10dp"
+            app:strokeWidth="0dp"
+            android:backgroundTint="#F0FF91"
+
+            >
+            <ImageView
+
+                android:id="@+id/cart_home_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/coins"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@android:dimen/app_icon_size"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="100"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="30dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/your_location_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tournaments"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:textColor="#1A2530"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/airbnbcereal_md"
+            />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tournamentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
