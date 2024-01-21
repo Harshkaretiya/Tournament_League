@@ -18,5 +18,5 @@ class HomePageListModel {
 
     @Expose
     @SerializedName("description")
-    var desc = ""
+    var description = ""
 }

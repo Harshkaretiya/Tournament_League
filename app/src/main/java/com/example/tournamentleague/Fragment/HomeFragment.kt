@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tournamentleague.API.ApiClient
 import com.example.tournamentleague.API.ApiInterface
+import com.example.tournamentleague.Activity.MainActivity
 import com.example.tournamentleague.Adapter.HomePageListAdapter
 import com.example.tournamentleague.Model.HomePageListModel
 import com.example.tournamentleague.R
@@ -31,6 +32,14 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding!!.root
+
+        binding!!.drawerButton.setOnClickListener {
+            if (activity is MainActivity) {
+                val mainActivity = activity as MainActivity
+                mainActivity.openDrawer()
+            }
+        }
+
 
         var manager : RecyclerView.LayoutManager = LinearLayoutManager(requireActivity())
         binding!!.recyclerList.layoutManager=manager

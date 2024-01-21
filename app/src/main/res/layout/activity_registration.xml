@@ -24,7 +24,7 @@
                 android:text="Create Account"
                 android:textSize="28sp"
                 android:fontFamily="@font/airbnbcereal_md"
-                android:textColor="#1A2530"
+                android:textColor="@color/text_color_black"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 />
@@ -34,7 +34,7 @@
                 android:text="Let’s Create Account Together"
                 android:textSize="16sp"
                 android:fontFamily="@font/airbnbcereal_bk"
-                android:textColor="#707B81"
+                android:textColor="@color/text_color_grey"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 />
@@ -45,8 +45,8 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/airbnbcereal_md"
                 android:textSize="16sp"
-                android:textColor="#1A2530"
-                android:layout_marginTop="10dp"
+                android:textColor="@color/text_color_black"
+                android:layout_marginTop="50dp"
                 />
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -77,8 +77,8 @@
                         android:minHeight="52dp"
                         android:paddingLeft="10dp"
                         android:textSize="14sp"
-                        android:textColor="#1A2530"
-                        android:textColorHint="#707B81"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_grey"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:background="@color/white"
                         android:textColorHighlight="#5B9EE1"
@@ -91,7 +91,7 @@
                 android:text="Password"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
-                android:textColor="#1A2530"
+                android:textColor="@color/text_color_black"
                 android:fontFamily="@font/airbnbcereal_md"
                 android:layout_marginTop="10dp"
                 />
@@ -127,8 +127,8 @@
                         android:background="@color/white"
                         android:paddingLeft="10dp"
                         android:textSize="14sp"
-                        android:textColor="#1A2530"
-                        android:textColorHint="#707B81"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_grey"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:inputType="textPassword"
                         android:textColorHighlight="#5B9EE1"
@@ -142,7 +142,7 @@
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
                 android:fontFamily="@font/airbnbcereal_md"
-                android:textColor="#1A2530"
+                android:textColor="@color/text_color_black"
                 android:layout_marginTop="10dp"
                 />
             <com.google.android.material.card.MaterialCardView
@@ -176,8 +176,8 @@
                         android:hint="ReEnter your password"
                         android:background="@color/white"
                         android:paddingLeft="10dp"
-                        android:textColor="#1A2530"
-                        android:textColorHint="#707B81"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_grey"
                         android:textSize="14sp"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:inputType="textPassword"
@@ -192,7 +192,7 @@
                 android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:backgroundTint="#5B9EE1"
+                android:backgroundTint="@color/blue_button"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="30dp"
@@ -206,26 +206,6 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins_semibold"
                     android:textSize="18dp"
-                    />
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="30dp"
-                app:strokeWidth="0dp"
-                android:backgroundTint="@color/white"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign in with Google"
-                    android:fontFamily="@font/airbnbcereal_md"
-                    android:textSize="18sp"
-                    android:layout_gravity="center"
-                    android:textColor="#707B81"
                     />
             </com.google.android.material.card.MaterialCardView>
 
@@ -242,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:text="Already have account?"
                     android:textSize="12dp"
-                    android:textColor="#707B81"
+                    android:textColor="@color/text_color_grey"
                     android:fontFamily="@font/poppins_semibold"
                     />
                 <TextView
@@ -252,7 +232,7 @@
                     android:text="Login"
                     android:textSize="12dp"
                     android:layout_marginLeft="5dp"
-                    android:textColor="#5B9EE1"
+                    android:textColor="@color/blue_text"
                     android:fontFamily="@font/poppins_semibold"
                     />
             </LinearLayout>

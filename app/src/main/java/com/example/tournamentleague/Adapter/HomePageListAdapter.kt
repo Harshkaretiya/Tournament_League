@@ -34,7 +34,7 @@ class HomePageListAdapter(var context: Context, var list: MutableList<HomePageLi
         }
 
         holder.name.setText(list[position].name)
-        holder.desc.setText(list[position].desc)
+        holder.desc.setText(list[position].description)
 //        Toast.makeText(context, list[position].name, Toast.LENGTH_SHORT).show()
     }
 }
