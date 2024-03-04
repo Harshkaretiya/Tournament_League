@@ -8,14 +8,18 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.tournamentleague.Fragment.HomeFragment
+import com.example.tournamentleague.Fragment.NotificationFragment
+import com.example.tournamentleague.Fragment.RecentMatchFragment
 import com.example.tournamentleague.R
 import com.example.tournamentleague.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavBar.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> replaceFragment(HomeFragment())
+                R.id.recentMatch -> replaceFragment(RecentMatchFragment())
+                R.id.notification -> replaceFragment(NotificationFragment())
             }
             true
         }
@@ -86,6 +92,20 @@ class MainActivity : AppCompatActivity() {
     }
     fun closeDrawer(){
         binding.drawerLayout.closeDrawer(GravityCompat.START)
+    }
+
+    override fun onBackPressed() {
+        val builder = MaterialAlertDialogBuilder(this@MainActivity,R.style.myMaterialDialog)
+        builder.setTitle("Are You Sure You Want to Exit ?")
+
+        builder.setPositiveButton("Yes"){ dialog,_ ->
+            finishAffinity()
+        }
+        builder.setNegativeButton("No"){dialog,_ ->
+            dialog.dismiss()
+        }
+        val exitDialog = builder.create()
+        exitDialog.show()
     }
 
 }

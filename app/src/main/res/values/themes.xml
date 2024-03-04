@@ -8,4 +8,8 @@
     </style>
 
     <style name="Theme.TournamentLeague" parent="Base.Theme.TournamentLeague" />
+
+    <style name="myMaterialDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/blue_button</item>
+    </style>
 </resources>
