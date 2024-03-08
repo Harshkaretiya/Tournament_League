@@ -81,7 +81,7 @@
                         android:textColorHint="@color/text_color_grey"
                         android:textSize="14sp"
                         android:fontFamily="@font/airbnbcereal_bk"
-                        android:textColorHighlight="#5B9EE1" />
+                        android:textColorHighlight="@color/blue_button" />
                 </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -129,7 +129,7 @@
                         android:textColorHint="@color/text_color_grey"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:inputType="textPassword"
-                        android:textColorHighlight="#5B9EE1"
+                        android:textColorHighlight="@color/blue_button"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.card.MaterialCardView>

@@ -14,6 +14,6 @@ class TournamentListActivity : AppCompatActivity() {
         binding = ActivityTournamentListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        
     }
 }

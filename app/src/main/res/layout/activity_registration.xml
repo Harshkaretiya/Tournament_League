@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="@color/background_color"
     android:orientation="vertical"
     tools:context=".Activity.RegistrationActivity">
     <ScrollView
@@ -81,7 +81,7 @@
                         android:textColorHint="@color/text_color_grey"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:background="@color/white"
-                        android:textColorHighlight="#5B9EE1"
+                        android:textColorHighlight="@color/blue_button"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -131,7 +131,7 @@
                         android:textColorHint="@color/text_color_grey"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:inputType="textPassword"
-                        android:textColorHighlight="#5B9EE1"
+                        android:textColorHighlight="@color/blue_button"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -181,7 +181,7 @@
                         android:textSize="14sp"
                         android:fontFamily="@font/airbnbcereal_bk"
                         android:inputType="textPassword"
-                        android:textColorHighlight="#5B9EE1"
+                        android:textColorHighlight="@color/blue_button"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.card.MaterialCardView>

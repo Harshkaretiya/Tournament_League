@@ -10,8 +10,15 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup.MarginLayoutParams
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.tournamentleague.Fragment.HomeFragment
@@ -70,6 +77,10 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(Intent(this,LoginActivity::class.java))
         }
+        binding.profileLayout.setOnClickListener {
+            startActivity(Intent(this,ProfileActivity::class.java))
+        }
+
 
     }
 
@@ -80,6 +91,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Inside MainActivity class
+    //not used
     fun toggleDrawer() {
         if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             binding.drawerLayout.closeDrawer(GravityCompat.START)
@@ -95,6 +107,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+
+
         val builder = MaterialAlertDialogBuilder(this@MainActivity,R.style.myMaterialDialog)
         builder.setTitle("Are You Sure You Want to Exit ?")
 
@@ -106,6 +120,7 @@ class MainActivity : AppCompatActivity() {
         }
         val exitDialog = builder.create()
         exitDialog.show()
+        super.onBackPressed()
     }
 
 }

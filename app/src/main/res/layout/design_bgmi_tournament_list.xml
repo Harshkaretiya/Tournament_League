@@ -18,7 +18,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginLeft="12dp"
             app:strokeWidth="0dp"
-            android:backgroundTint="#DFEFFF"
+            android:backgroundTint="@color/light_blue_background_color"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -26,6 +26,7 @@
                 android:text="3:00 PM 10/10/23"
                 android:textSize="10sp"
                 android:fontFamily="@font/airbnbcereal_bk"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 />
         </com.google.android.material.card.MaterialCardView>
@@ -40,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="Total Prize : "
                 android:textSize="12sp"
-                android:textColor="#707B81"
+                android:textColor="@color/text_color_grey"
                 android:fontFamily="@font/airbnbcereal_bk"
                 android:layout_centerVertical="true"
                 />
@@ -48,7 +49,7 @@
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 app:strokeWidth="0dp"
-                android:backgroundTint="#DFEFFF"
+                android:backgroundTint="@color/light_blue_background_color"
                 app:cardCornerRadius="10dp"
                 android:layout_alignParentRight="true"
                 >
@@ -62,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:text="160"
                         android:textSize="12sp"
-                        android:textColor="#1A2530"
+                        android:textColor="@color/text_color_black"
                         android:fontFamily="@font/airbnbcereal_md"
                         />
                     <TextView
@@ -70,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:text=" Rs"
                         android:textSize="12sp"
-                        android:textColor="#1A2530"
+                        android:textColor="@color/text_color_black"
                         android:fontFamily="@font/airbnbcereal_md"
                         />
                 </LinearLayout>
@@ -88,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:text="Remaining Entry: "
                 android:textSize="10sp"
-                android:textColor="#707B81"
+                android:textColor="@color/text_color_grey"
                 android:fontFamily="@font/airbnbcereal_bk"
                 />
             <TextView
@@ -96,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="10sp"
-                android:textColor="#1A2530"
+                android:textColor="@color/text_color_black"
                 android:fontFamily="@font/airbnbcereal_bk"
                 />
             <TextView
@@ -104,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:text="/"
                 android:textSize="10sp"
-                android:textColor="#1A2530"
+                android:textColor="@color/text_color_black"
                 android:fontFamily="@font/airbnbcereal_bk"
                 />
             <TextView
@@ -112,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:text="25"
                 android:textSize="10sp"
-                android:textColor="#1A2530"
+                android:textColor="@color/text_color_black"
                 android:fontFamily="@font/airbnbcereal_bk"
                 />
         </LinearLayout>
@@ -123,7 +124,7 @@
             app:cardCornerRadius="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="15dp"
-            android:backgroundTint="#72B6E8"
+            android:backgroundTint="@color/blue_button"
             android:layout_alignParentEnd="true"
             >
             <TextView
@@ -131,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:text="Squad"
                 android:textSize="10sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:fontFamily="@font/airbnbcereal_md"
                 />
@@ -151,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:text="Entry Fee : "
                 android:textSize="10sp"
-                android:textColor="#707B81"
+                android:textColor="@color/text_color_grey"
                 android:fontFamily="@font/airbnbcereal_bk"
                 />
             <com.google.android.material.card.MaterialCardView
@@ -160,14 +161,14 @@
                 app:cardCornerRadius="5dp"
                 android:layout_marginTop="5dp"
                 app:strokeWidth="0dp"
-                android:backgroundTint="#72E877"
+                android:backgroundTint="@color/green_background_color"
                 >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Free"
                     android:textSize="12sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:layout_gravity="center"
                     android:fontFamily="@font/airbnbcereal_md"
                     />

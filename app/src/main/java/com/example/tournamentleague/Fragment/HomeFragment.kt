@@ -1,6 +1,7 @@
 package com.example.tournamentleague.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -61,6 +62,7 @@ class HomeFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<List<HomePageListModel>>, t: Throwable) {
+                Log.e("API Error", "Failed to make API call", t)
                 Toast.makeText(requireActivity(), "No Internet", Toast.LENGTH_LONG).show()
             }
         })
@@ -71,6 +73,5 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }
