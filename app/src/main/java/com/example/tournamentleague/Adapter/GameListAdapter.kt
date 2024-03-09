@@ -3,19 +3,17 @@ package com.example.tournamentleague.Adapter
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tournamentleague.Model.HomePageListModel
+import com.example.tournamentleague.Activity.TournamentListActivity
+import com.example.tournamentleague.Model.GameListModel
 import com.example.tournamentleague.R
 
-class HomePageListAdapter(var context: Context, var list: MutableList<HomePageListModel>) : RecyclerView.Adapter<MyView>()
+class GameListAdapter(var context: Context, var list: MutableList<GameListModel>) : RecyclerView.Adapter<MyView>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyView {
         val data = LayoutInflater.from(context)
@@ -34,7 +32,14 @@ class HomePageListAdapter(var context: Context, var list: MutableList<HomePageLi
         }
 
         holder.name.setText(list[position].name)
-        holder.desc.setText(list[position].description)
+        holder.gameType.setText(list[position].gametype)
+
+        holder.itemView.setOnClickListener {
+            var i = Intent(context,TournamentListActivity::class.java)
+            i.putExtra("gameid",list[position].gameid)
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(i)
+        }
 //        Toast.makeText(context, list[position].name, Toast.LENGTH_SHORT).show()
     }
 }
@@ -42,5 +47,5 @@ class MyView(itemView: View) : RecyclerView.ViewHolder(itemView)
 {
     var image : ImageView =itemView.findViewById(R.id.image)
     var name : TextView =itemView.findViewById(R.id.name)
-    var desc : TextView = itemView.findViewById(R.id.desc)
+    var gameType : TextView = itemView.findViewById(R.id.gameType)
 }

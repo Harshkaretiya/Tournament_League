@@ -3,10 +3,10 @@ package com.example.tournamentleague.Model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class HomePageListModel {
+class GameListModel {
     @Expose
-    @SerializedName("tid")
-    var tid = 0
+    @SerializedName("gameid")
+    var gameid = 0
 
     @Expose
     @SerializedName("name")
@@ -17,6 +17,6 @@ class HomePageListModel {
     var image = ""
 
     @Expose
-    @SerializedName("description")
-    var description = ""
+    @SerializedName("gametype")
+    var gametype = ""
 }

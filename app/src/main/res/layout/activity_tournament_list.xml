@@ -15,6 +15,7 @@
         android:layout_marginHorizontal="10dp"
         >
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
@@ -75,8 +76,9 @@
             />
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tournamentRecyclerView"
+        android:id="@+id/tournamentListRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         />
 </LinearLayout>

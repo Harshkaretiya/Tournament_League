@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tournamentleague.API.ApiClient
 import com.example.tournamentleague.API.ApiInterface
 import com.example.tournamentleague.Activity.MainActivity
-import com.example.tournamentleague.Adapter.HomePageListAdapter
-import com.example.tournamentleague.Model.HomePageListModel
+import com.example.tournamentleague.Adapter.GameListAdapter
+import com.example.tournamentleague.Model.GameListModel
 import com.example.tournamentleague.R
 import com.example.tournamentleague.databinding.FragmentHomeBinding
 import retrofit2.Call
@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding
-    lateinit var list : MutableList<HomePageListModel>
+    lateinit var list : MutableList<GameListModel>
     lateinit var apiInterface: ApiInterface
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,34 +41,39 @@ class HomeFragment : Fragment() {
             }
         }
 
+        list = ArrayList()
 
+        getData()
+
+        return view
+    }
+
+    private fun getData() {
         var manager : RecyclerView.LayoutManager = LinearLayoutManager(requireActivity())
         binding!!.recyclerList.layoutManager=manager
 
-        list = ArrayList()
 
         apiInterface = ApiClient.getapiclient().create(ApiInterface::class.java)
-        var call: Call<List<HomePageListModel>> = apiInterface.gethomepagelist()
-        call.enqueue(object: Callback<List<HomePageListModel>>
+        var call: Call<List<GameListModel>> = apiInterface.getgamelist()
+        call.enqueue(object: Callback<List<GameListModel>>
         {
-            override fun onResponse(call: Call<List<HomePageListModel>>, response: Response<List<HomePageListModel>>) {
+            override fun onResponse(call: Call<List<GameListModel>>, response: Response<List<GameListModel>>) {
                 if (context != null) {
-                    list = response.body() as MutableList<HomePageListModel>
+                    list = response.body() as MutableList<GameListModel>
 
-                    var adapter = HomePageListAdapter(requireActivity(), list)
+                    var adapter = GameListAdapter(requireActivity(), list)
                     binding!!.recyclerList.adapter = adapter
                 }
 
             }
 
-            override fun onFailure(call: Call<List<HomePageListModel>>, t: Throwable) {
-                Log.e("API Error", "Failed to make API call", t)
+            override fun onFailure(call: Call<List<GameListModel>>, t: Throwable) {
+
                 Toast.makeText(requireActivity(), "No Internet", Toast.LENGTH_LONG).show()
             }
         })
-
-        return view
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
