@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/tournamentActivity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,12 +8,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F8F9FA"
-    tools:context=".Activity.TournamentListActivity">
+    tools:context=".Activity.TournamentFolder.TournamentListActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="20dp"
         >
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/backButton"
@@ -64,7 +65,7 @@
 
         </com.google.android.material.card.MaterialCardView>
         <TextView
-            android:id="@+id/your_location_tag"
+            android:id="@+id/tournamentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tournaments"

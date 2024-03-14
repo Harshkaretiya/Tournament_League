@@ -9,8 +9,7 @@ import javax.net.ssl.X509TrustManager
 
 class ApiClient {
     companion object {
-        var BASE_URL = "https://harshkaretiya.000webhostapp.com/TournamentLeague/"
-//        var BASE_URL = "https://www.harshkaretiya.rf.gd/"
+        var BASE_URL = "https://harshkaretiya123.000webhostapp.com/TournamentLeague/"
 
         var retrofit: Retrofit? = null
 

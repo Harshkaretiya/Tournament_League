@@ -1,6 +1,7 @@
 package com.example.tournamentleague.API
 
 import com.example.tournamentleague.Model.GameListModel
+import com.example.tournamentleague.Model.MemberGameDetailModel
 import com.example.tournamentleague.Model.ModelUser
 import com.example.tournamentleague.Model.TournamentListModel
 import retrofit2.Call
@@ -34,4 +35,16 @@ interface ApiInterface {
     fun gettournamentbygameid(
         @Query("gameid") game_id:Int,
     ): Call<List<TournamentListModel>>
+
+    @GET("gettournamentbytournamentid.php")
+    fun gettournamentbytournamentid(
+        @Query("tid") tournament_id:Int,
+    ): Call<TournamentListModel>
+
+    @FormUrlEncoded
+    @POST("getmembergamedetailbyid.php")
+    fun getmembergamedetailbyid(
+        @Field("memberid") memberid:Int,
+    ): Call<MemberGameDetailModel>
+
 }

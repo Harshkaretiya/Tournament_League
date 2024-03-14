@@ -1,12 +1,17 @@
 package com.example.tournamentleague.Adapter
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.ContentInfoCompat.Flags
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tournamentleague.Activity.TournamentFolder.TournamentViewActivity
 import com.example.tournamentleague.Model.TournamentListModel
 import com.example.tournamentleague.R
 
@@ -33,6 +38,13 @@ class TournamentListAdapter(var context: Context, var list: MutableList<Tourname
             holder.entryFee.setText("Free")
         else
             holder.entryFee.setText(setentryfee.toString())
+
+        holder.itemView.setOnClickListener {
+            var i = Intent(context,TournamentViewActivity::class.java)
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            i.putExtra("tournamentid",list[position].tournamentid)
+            context.startActivity(i)
+        }
     }
 }
 class MyView2(itemView: View) : RecyclerView.ViewHolder(itemView)

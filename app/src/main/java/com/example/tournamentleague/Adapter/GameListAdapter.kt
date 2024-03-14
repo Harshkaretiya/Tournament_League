@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tournamentleague.Activity.TournamentListActivity
+import com.example.tournamentleague.Activity.TournamentFolder.TournamentListActivity
 import com.example.tournamentleague.Model.GameListModel
 import com.example.tournamentleague.R
 
@@ -35,8 +35,9 @@ class GameListAdapter(var context: Context, var list: MutableList<GameListModel>
         holder.gameType.setText(list[position].gametype)
 
         holder.itemView.setOnClickListener {
-            var i = Intent(context,TournamentListActivity::class.java)
+            var i = Intent(context, TournamentListActivity::class.java)
             i.putExtra("gameid",list[position].gameid)
+            i.putExtra("gamename",list[position].name)
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(i)
         }

@@ -1,14 +1,19 @@
-package com.example.tournamentleague.Activity
+package com.example.tournamentleague.Activity.LoginAndRegistration
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.Toast
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.tournamentleague.API.ApiClient
 import com.example.tournamentleague.API.ApiInterface
+import com.example.tournamentleague.Activity.MainActivity
 import com.example.tournamentleague.Model.ModelUser
 import com.example.tournamentleague.R
 import com.example.tournamentleague.databinding.ActivityLoginBinding
@@ -23,13 +28,20 @@ class LoginActivity : AppCompatActivity() {
     lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge(statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT))
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.loginActivity)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right,systemBars.bottom)
+            insets
+        }
+
 
         sharedPreferences = getSharedPreferences("User_Session", Context.MODE_PRIVATE)
 
         if (sharedPreferences.getString("User_Session","notworking") == "login") {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         binding.loginButton.setOnClickListener {
@@ -42,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
             edit1.apply()
         }
         binding.registerButton.setOnClickListener {
-            startActivity(Intent(this,RegistrationActivity::class.java))
+            startActivity(Intent(this, RegistrationActivity::class.java))
         }
 
     }
