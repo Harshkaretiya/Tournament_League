@@ -67,7 +67,7 @@ class TournamentViewActivity : AppCompatActivity() {
                         var bgmiId = response.body()!!.bgmiid
                         var bgmiName = response.body()!!.bgmiusername
 
-                        setMemberGameDetail(gameid,bgmiId,bgmiName)
+                        setMemberGameDetail(gameid,bgmiId,bgmiName) //
 
                     }
                 }
