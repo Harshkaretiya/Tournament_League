@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +17,7 @@ import com.example.tournamentleague.Adapter.GameListAdapter
 import com.example.tournamentleague.Model.GameListModel
 import com.example.tournamentleague.R
 import com.example.tournamentleague.databinding.FragmentHomeBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,6 +41,23 @@ class HomeFragment : Fragment() {
                 val mainActivity = activity as MainActivity
                 mainActivity.openDrawer()
             }
+        }
+
+        binding!!.myCoins.setOnClickListener {
+            val builder = MaterialAlertDialogBuilder(requireActivity(), R.style.myMaterialDialog)
+//            builder.setTitle("Enter Game ID and Username")
+            val customLayout = layoutInflater.inflate(R.layout.design_get_usergame_detail, null)
+            val editText = customLayout.findViewById<EditText>(R.id.getGameDataId) // Get the EditText
+            builder.setView(customLayout)
+
+            builder.setPositiveButton("Submit") { dialog, _ ->
+                Toast.makeText(requireActivity(), editText.text.toString(), Toast.LENGTH_SHORT).show()
+            }
+            builder.setNegativeButton("Cancel") { dialog, _ ->
+                dialog.dismiss()
+            }
+            val exitDialog = builder.create()
+            exitDialog.show()
         }
 
         list = ArrayList()

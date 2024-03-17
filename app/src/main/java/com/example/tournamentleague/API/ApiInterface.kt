@@ -1,5 +1,6 @@
 package com.example.tournamentleague.API
 
+import com.example.tournamentleague.Model.FriendInviteModel
 import com.example.tournamentleague.Model.GameListModel
 import com.example.tournamentleague.Model.MemberGameDetailModel
 import com.example.tournamentleague.Model.ModelUser
@@ -46,5 +47,10 @@ interface ApiInterface {
     fun getmembergamedetailbyid(
         @Field("memberid") memberid:Int,
     ): Call<MemberGameDetailModel>
+
+    @GET("getfriendlistbymemberid.php")
+    fun getfriendlistbymemberid(
+        @Query("memberid") memberid:Int,
+    ): Call<List<FriendInviteModel>>
 
 }
